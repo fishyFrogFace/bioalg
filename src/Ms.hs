@@ -2,6 +2,8 @@ module Ms
     ( Multiset(..)
     , show
     , fromList
+    , msmap
+    , size
     ) where
 
 import Data.List (sort)
@@ -22,3 +24,9 @@ mshow (Multiset elems) = "ms{" ++ show' elems
 fromList :: Ord a => [a] -> Multiset a
 fromList [] = (Multiset [])
 fromList l = Multiset $ sort l
+
+msmap :: ([t] -> [a]) -> Multiset t -> Multiset a
+msmap f (Multiset n) = Multiset (f n)
+
+size :: Multiset a -> Int
+size (Multiset n) = Prelude.length n

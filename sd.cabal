@@ -19,7 +19,7 @@ library
                      , Ms
   build-depends:       base >= 4.7 && < 5
                      , containers >= 0.5.7 && < 0.5.11
-                     , hspec
+                     , arithmoi
   default-language:    Haskell2010
 
 executable sd-exe

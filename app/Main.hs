@@ -10,4 +10,4 @@ readMs = fmap fromList list
 main :: IO ()
 main = do
     deltaX <- readMs
-    print deltaX
+    print $ solve deltaX
